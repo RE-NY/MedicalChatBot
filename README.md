@@ -27,12 +27,31 @@ cd medical-chatbot-rag
 ```bash
 pip install -r requirements.txt
 ```
+3. Set Up Pinecone:
+Create an account at Pinecone and obtain your API key.
+Create a Pinecone index and note down the index name.
 
+4. Configure Environment Variables:
+Create a .env file in the root directory and add your Pinecone API key and index name.
+```env
+PINECONE_API_KEY=your_pinecone_api_key
+PINECONE_INDEX_NAME=your_pinecone_index_name
+```
+5. Run the Flask Application:
+```bash
+flask run
+```
+6. Access the ChatBot:
+Open your web browser and go to <http://127.0.0.1:5000> to interact with the chatbot.
 
 ## Usage
 Enter your medical queries in the chat interface, and the chatbot will provide responses based on the Gale Encyclopedia of Medicine. The chatbot leverages embeddings and retrieval-augmented generation to offer accurate and contextually relevant answers.
 
-
-
+## Acknowledgments
+- Hugging Face: For providing the models and tools.
+- Pinecone: For the vector database.
+- Langchain: For the RAG framework.
+- Flask: For the web framework.
+- Gale Encyclopedia of Medicine: For the data source.
 
 
